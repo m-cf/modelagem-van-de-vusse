@@ -88,7 +88,7 @@ def solve_estado_estacionario(u1_val, u2_val, initial_guess):
   """Resolve para o estado estacionário (derivadas = 0)"""
 
   def equations(y):
-      # Passamos t=0, dT/dt = 0
+      # Considerando t=0, dT/dt = 0
       return modelo_reator(0, y, u1_val, u2_val)
 
   root = fsolve(equations, initial_guess)
